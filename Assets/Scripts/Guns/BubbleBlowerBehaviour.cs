@@ -7,14 +7,14 @@ public class BubbleBlowerBehaviour : GunBehavior
     // Start is called before the first frame update
     void Start()
     {
-        gunCooldown = 0.1f;
-        gunRecoil = 1.05f;
+        gunCooldown = 0.2f;
+        gunRecoil = 0.505f;
     }
 
     // Update is called once per frame
-    new void Update()
+    new void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
     }
 
     new public float Shoot()

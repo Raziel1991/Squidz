@@ -16,7 +16,7 @@ public abstract class GunBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected void FixedUpdate()
     {
         cooldownTimer -= Time.deltaTime;
     }
@@ -25,7 +25,7 @@ public abstract class GunBehavior : MonoBehaviour
     {
         if (cooldownTimer > 0) return 0;
 
-        ProjectileBase projectile = Instantiate(this.bulletPrefab, this.transform.position, this.transform.rotation);
+        ProjectileBase projectile = Instantiate(bulletPrefab, shootingPoint.transform.position, transform.rotation);
         projectile.Project(this.transform.up);
 
         //Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);

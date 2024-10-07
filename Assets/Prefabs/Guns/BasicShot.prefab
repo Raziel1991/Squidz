@@ -50,7 +50,7 @@ MonoBehaviour:
   gunCooldown: 0
   cooldownTimer: 0
   shootingPoint: {fileID: 3344825760187277331}
-  bulletPrefab: {fileID: 2670373373069368328, guid: af9cdf0b6acc11b4eb06d51085711374, type: 3}
+  bulletPrefab: {fileID: 7903343888328806638, guid: af9cdf0b6acc11b4eb06d51085711374, type: 3}
 --- !u!1 &2365386423892795268
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,21 +2,21 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ProjectileBase : MonoBehaviour
+public abstract class ProjectileBase : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private Vector3 shootDirection;
-    float damage = 30f;
-    public float speed = 1.0f;
-    public float maxLifeTime = 10.0f; //lifetime 10.0f equal to 10 seconds 
-    private void Awake()
+    protected Rigidbody2D rb;
+    protected Vector3 shootDirection;
+    protected float damage;
+    protected float speed; //= 1.0f;
+    protected float maxLifeTime = 10.0f; //lifetime 10.0f equal to 10 seconds 
+    protected void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    protected void FixedUpdate()
     {
-        transform.position += (shootDirection * speed)/20000;
+        transform.position += (shootDirection * speed)/100;
     }
 
     public void Project(Vector3 direction)
@@ -25,7 +25,7 @@ public class ProjectileBase : MonoBehaviour
         Destroy(gameObject, maxLifeTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -34,7 +34,7 @@ public class ProjectileBase : MonoBehaviour
             Destroy(gameObject);
         }
 
-        else
+        else if (!collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
         }

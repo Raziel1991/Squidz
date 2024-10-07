@@ -20,7 +20,7 @@ public class NewPlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         HandleRotation();
 
@@ -41,7 +41,7 @@ public class NewPlayerMovement : MonoBehaviour
 
         if (rb.velocity.magnitude > 0)
         {
-            rb.velocity = rb.velocity * 0.999f;
+            rb.velocity = rb.velocity * 0.98f;
         }
 
     }

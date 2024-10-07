@@ -8,13 +8,13 @@ public class InkCanonBehaviour : GunBehavior
     void Start()
     {
         gunCooldown = 3f;
-        gunRecoil = 9f;
+        gunRecoil = 6f;
     }
 
     // Update is called once per frame
-    new void Update()
+    new void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
     }
 
     new float Shoot()

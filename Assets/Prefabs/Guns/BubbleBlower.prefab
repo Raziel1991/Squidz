@@ -193,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 4014891847176002482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -252,7 +252,7 @@ MonoBehaviour:
   gunCooldown: 0
   cooldownTimer: 0
   shootingPoint: {fileID: 646691626586567888}
-  bulletPrefab: {fileID: 8140788222682749124, guid: af9cdf0b6acc11b4eb06d51085711374, type: 3}
+  bulletPrefab: {fileID: 6119534963181036395, guid: c6ff5c2297859f3478249f988013fe18, type: 3}
 --- !u!1 &8881588694750315966
 GameObject:
   m_ObjectHideFlags: 0
