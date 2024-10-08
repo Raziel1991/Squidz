@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &356507650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6658616906079587122, guid: 7f450aeb202e8104b8e60bb206aeabbe, type: 3}
+  m_PrefabInstance: {fileID: 689314990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456494500
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +212,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &540560019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6023491110784579085, guid: 9e0e949d98657e048ab02e5e7f008e50, type: 3}
+  m_PrefabInstance: {fileID: 1752146137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &689314990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -484,6 +494,7 @@ GameObject:
   - component: {fileID: 2051985435}
   - component: {fileID: 2051985434}
   - component: {fileID: 2051985433}
+  - component: {fileID: 2051985436}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -565,6 +576,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2051985436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051985432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b2717d3c0fe584d9b61f5221dc620d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPlaerOne: {fileID: 356507650}
+  targetPlaerTwo: {fileID: 540560019}
+  cameraSpeed: 5
+  smoothFactor: 0.1
 --- !u!1001 &5558521174772916770
 PrefabInstance:
   m_ObjectHideFlags: 0
