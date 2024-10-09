@@ -588,10 +588,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b2717d3c0fe584d9b61f5221dc620d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPlaerOne: {fileID: 356507650}
-  targetPlaerTwo: {fileID: 540560019}
+  targetPlayerOne: {fileID: 356507650}
+  targetPlayerTwo: {fileID: 540560019}
   cameraSpeed: 5
-  smoothFactor: 0.1
+  zoomSpeed: 2
+  maxDistance: 10
+  minDistance: 3
+  minZoom: 2
+  maxZoom: 5
 --- !u!1001 &5558521174772916770
 PrefabInstance:
   m_ObjectHideFlags: 0
