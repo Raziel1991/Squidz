@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //ignore this line
+    
     public float rotationSpeed = 100f;  // Rotation sensitivity
     public float impulseForce = 10f;    // Force of the shot backward
     public float movementDuration = 0.5f;  // How long the movement should last
     public float maxDistance = 5f;      // Maximum distance to move before stopping
 
+
     private Rigidbody2D rb;
     private bool isMoving = false;
     private Vector2 startPosition;
     private float moveTimeRemaining;
+
+    public ProjectileBase projectilePrefab;
 
     void Start()
     {
@@ -26,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         HandleRotation();
 
         // Detect shooting input (e.g., pressing Left Shift to shoot backward)
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isMoving)
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !isMoving)
         {
             Shoot();
         }
@@ -56,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
         // Start tracking movement time and position
         startPosition = rb.position;
         moveTimeRemaining = movementDuration;
+
+        //Shoot bullet
+        ProjectileBase projectile = Instantiate(this.projectilePrefab, this.transform.position, this.transform.rotation);
+        projectile.Project(this.transform.up);
+
         isMoving = true;
     }
 
