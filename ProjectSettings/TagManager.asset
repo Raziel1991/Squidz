@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Blower
+  - Cannon
   layers:
   - Default
   - TransparentFX

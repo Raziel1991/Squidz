@@ -10,9 +10,10 @@ public abstract class GunBehavior : MonoBehaviour
     public float cooldownTimer = 0;
     public Transform shootingPoint;
     public ProjectileBase bulletPrefab;
+    public AudioSource audioGun;
     void Start()
     {
-
+        audioGun = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,8 +24,8 @@ public abstract class GunBehavior : MonoBehaviour
 
     public float Shoot()
     {
+        audioGun.Play();
         if (cooldownTimer > 0) return 0;
-
         ProjectileBase projectile = Instantiate(bulletPrefab, shootingPoint.transform.position, transform.rotation);
         projectile.Project(this.transform.up);
 

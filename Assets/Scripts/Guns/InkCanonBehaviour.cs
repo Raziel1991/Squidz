@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class InkCanonBehaviour : GunBehavior
 {
+    //public AudioSource audioCannon;
     // Start is called before the first frame update
     void Start()
     {
         gunCooldown = 3f;
         gunRecoil = 6f;
+        //audioCannon = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,6 +21,7 @@ public class InkCanonBehaviour : GunBehavior
 
     new float Shoot()
     {
+        //audioCannon.PlayOneShot(audioCannon.clip);
         return base.Shoot();
     }
 }

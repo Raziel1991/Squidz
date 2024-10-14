@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class BubbleBlowerBehaviour : GunBehavior
 {
+    //public AudioSource audioCannon;
     // Start is called before the first frame update
     void Start()
     {
         gunCooldown = 0.2f;
         gunRecoil = 0.505f;
+        //audioCannon = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,6 +21,7 @@ public class BubbleBlowerBehaviour : GunBehavior
 
     new public float Shoot()
     {
+        //audioCannon.Play();
         return base.Shoot();
     }
 }
