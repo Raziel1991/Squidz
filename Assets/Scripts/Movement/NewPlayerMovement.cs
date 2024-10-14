@@ -9,6 +9,7 @@ public class NewPlayerMovement : MonoBehaviour
     public float rotationSpeed = 200f;
     public float hp = 100f;
     public GunBehavior gun;
+    public AudioSource audioBump;
 
     [SerializeField] private bool isPlayer2 = false;
     private Rigidbody2D rb;
@@ -89,6 +90,14 @@ public class NewPlayerMovement : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+    // Wall_hit sfx
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            audioBump.Play();
         }
     }
 
