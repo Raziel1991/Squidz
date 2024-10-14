@@ -1,0 +1,27 @@
+Main Menu
+game over x
+postmatch x
+
+Gameplay audio:
+//Movement
+Squid moving x
+Bump x
+
+//Gunshots:
+Basic Gunshot x
+Bubble Gunshot x
+Ink Gunshot x
+
+//Pickups:
+Gun upgrades 
+bubble shield
+
+//Characters:
+Death x
+Win x
+
+//Status:
+Win x
+
+
+
