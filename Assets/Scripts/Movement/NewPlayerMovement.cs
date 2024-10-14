@@ -9,7 +9,7 @@ public class NewPlayerMovement : MonoBehaviour
     public float rotationSpeed = 200f;
     public float hp = 100f;
     public GunBehavior gun;
-    public AudioSource audioBump;
+    public AudioSource audioBump, audioHit;
 
     [SerializeField] private bool isPlayer2 = false;
     private Rigidbody2D rb;
@@ -95,7 +95,14 @@ public class NewPlayerMovement : MonoBehaviour
     // Wall_hit sfx
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Wall")
+        switch (collision.gameObject.tag)
+        {
+            case "Bullet":
+                audioHit.Play();
+                break;
+        }
+            
+        if(collision.gameObject.CompareTag("Wall"))
         {
             audioBump.Play();
         }
