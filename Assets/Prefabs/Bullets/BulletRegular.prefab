@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2330731735136678645}
   - component: {fileID: 3534689902292508946}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,10 +95,10 @@ GameObject:
   - component: {fileID: 5115943450885231409}
   - component: {fileID: 3339433671018939980}
   - component: {fileID: 3245384438560976120}
-  - component: {fileID: 2670373373069368328}
-  m_Layer: 7
+  - component: {fileID: 7903343888328806638}
+  m_Layer: 3
   m_Name: BulletRegular
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.923, y: 2.037, z: 2}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2330731735136678645}
@@ -134,7 +134,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -162,11 +162,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8140788222682749124}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -181,7 +181,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2670373373069368328
+--- !u!114 &7903343888328806638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,8 +190,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8140788222682749124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59a4de4434d4d284987dd8c7198d5f0c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc0b7abcf923acd4d85729e8802a2d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
-  maxLifeTime: 5
